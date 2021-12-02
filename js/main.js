@@ -34,26 +34,13 @@ function callAPI(city){
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 
-setInterval( function(){ //Funcion que se ejecutara cada cierto tiempo para actualizar los datos.
+setInterval( function(){
 
-    var newLista=getListaCiudades(); //Guardo listaCiudades en otra lista para utilizarla en el bucle for.
+    var newLista=getListaCiudades();
 
-    listaCiudades=[]; //vacio listaCiudades para posteriormente cargarle los nuevos datos actualizados.
+    listaCiudades=[];
 
-    for(let x=0; x<newLista.length; x++){ //Bucle for que recorre newLista para obtener los nombres de las ciudades gurdadas y poder hacer el llamdo a la API.
-
-        callAjax(newLista[x].cNombre).then(data =>{
-            console.log(data.name);
-            console.log("--------------");
-        }); 
-
-    }
-
-}, 5000000);
-
-function callAjax(nameLocation){
-
-    return new Promise((res, rej) =>{
+    for(let x=0; x<newLista.length; x++){
 
         $.ajax({ 
 
@@ -63,21 +50,15 @@ function callAjax(nameLocation){
     
             success: function(respuesta){ 
                 
-                res(respuesta);
+                //actualizarDatos(respuesta);
     
-            },
-            error: function(xhr, textEstatus, errorMessage){
-
-                rej(errorMessage);
-
             }
     
         })
 
-    })
+    }
 
-
-}
+}, 5000000);
 
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
@@ -172,11 +153,8 @@ function actualizarDatos(info){
         cSunOut:info.sys.sunset
     };
 
-    console.log("Lista vacia: ");
-    console.log(listaCiudades);
+
     listaCiudades.push(nuevaCiudad);
-    console.log("Lista llena: ");
-    console.log(listaCiudades);
 
     localStorageListaCiudad(listaCiudades);
 
