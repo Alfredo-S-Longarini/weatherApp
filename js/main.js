@@ -42,15 +42,19 @@ setInterval( function(){
 
     for(let x=0; x<newLista.length; x++){
 
+        console.log("Iteracion: "+ x);
+
         $.ajax({ 
 
             method: "GET", 
     
-            url: `https://api.openweathermap.org/data/2.5/weather?q=${nameLocation}&appid=${apiKey}`, 
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${newLista[x].cNombre}&appid=${apiKey}`, 
     
             success: function(respuesta){ 
                 
-                //actualizarDatos(respuesta);
+                console.log("Valor: "+ x);
+
+                // actualizarDatos(respuesta);
     
             }
     
@@ -58,7 +62,7 @@ setInterval( function(){
 
     }
 
-}, 5000000);
+}, 5000);
 
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
