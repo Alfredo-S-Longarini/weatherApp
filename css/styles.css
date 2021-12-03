@@ -49,7 +49,7 @@ html {
       font-size: 20px;
       margin: auto; }
     .card img {
-      width: 50%; }
+      width: 40%; }
     .card .cardP1 {
       display: flex;
       flex-direction: row;
