@@ -34,7 +34,7 @@ function callAPI(city){
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 
-setInterval( function(){
+setInterval( async function(){
 
     var newLista=getListaCiudades();
 
@@ -42,19 +42,15 @@ setInterval( function(){
 
     for(let x=0; x<newLista.length; x++){
 
-        console.log("Iteracion: "+ x);
-
-        $.ajax({ 
+        await $.ajax({ 
 
             method: "GET", 
     
             url: `https://api.openweathermap.org/data/2.5/weather?q=${newLista[x].cNombre}&appid=${apiKey}`, 
     
             success: function(respuesta){ 
-                
-                console.log("Valor: "+ x);
 
-                // actualizarDatos(respuesta);
+                actualizarDatos(respuesta);
     
             }
     
@@ -62,7 +58,7 @@ setInterval( function(){
 
     }
 
-}, 5000);
+}, 1800000);//Se actualiza cada 30min.
 
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
@@ -131,7 +127,8 @@ function agregarCiudad(info){
             cViento:info.wind.speed,
             cVisibilidad:info.visibility,
             cSunIn:info.sys.sunrise,
-            cSunOut:info.sys.sunset
+            cSunOut:info.sys.sunset,
+            cIcon: info.weather[0].icon
         };
 
         listaCiudades.push(nuevaCiudad);
@@ -154,7 +151,8 @@ function actualizarDatos(info){
         cViento:info.wind.speed,
         cVisibilidad:info.visibility,
         cSunIn:info.sys.sunrise,
-        cSunOut:info.sys.sunset
+        cSunOut:info.sys.sunset,
+        cIcon: info.weather[0].icon
     };
 
 
@@ -222,7 +220,7 @@ function mostrarCiudad(){
         contenido += "<input type='checkbox' name='localidad' value='"+ciudades.indexOf(ciudades[j])+"'></input>";
         contenido += "</div>";
         contenido += "</div>";
-        contenido += "<div class='row'><div class='col-lg-12'><img src='img/solLentes.png'></div></div>";
+        contenido += "<div class='row'><div class='col-lg-12'><img src='img/"+ciudades[j].cIcon+".png'></div></div>";
         contenido += "<div class='row'>";
         contenido += "<div class='col-lg-6 cardP1 temp'>"
         contenido += "<img class='tempIcon' src='img/tempIcono.png'>"
