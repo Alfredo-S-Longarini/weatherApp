@@ -59,7 +59,7 @@ setInterval( async function(){
 
     console.log("Actualizado.");
 
-}, 60000);//Se actualiza cada 1min.
+}, 300000);//Se actualiza cada 5min.
 
 
 // Función que actualiza los datos de las ciudades (ya cargadas) recreando la lista previa.
