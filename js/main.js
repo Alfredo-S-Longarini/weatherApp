@@ -13,6 +13,34 @@ $("#btnGuardar").click(function(){
 
 mostrarCiudad(listaCiudades);
 
+
+$(document).ready( async function(){
+
+    var newLista=getListaCiudades();
+
+    listaCiudades=[];
+
+    for(let x=0; x<newLista.length; x++){
+
+        await $.ajax({ 
+
+            method: "GET", 
+    
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${newLista[x].cNombre}&appid=${apiKey}`, 
+    
+            success: function(respuesta){ 
+
+                actualizarDatos(respuesta);
+    
+            }
+    
+        })
+
+    }
+
+    console.log("Actualizado.");
+});
+
 // ----------------------------------------------------------------------------------------
 
 let apiKey='0deee9c7a166e5a9c50fd9471c4270f4';

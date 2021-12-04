@@ -16,6 +16,17 @@
     background-size: cover;
   }
 
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img{
+      position: relative;
+      width: 25%;
+    }
+  }
+
   .titulo {
     text-align: center;
     margin: 10px 0 20px 0;
@@ -231,6 +242,17 @@
     padding-right: 0;
     background-image: url(../img/wp2532980-night-mountain-wallpapers.jpg);
     background-size: cover;
+  }
+
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img{
+      position: relative;
+      width: 80%;
+    }
   }
 
   .titulo {
