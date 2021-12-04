@@ -57,7 +57,9 @@ setInterval( async function(){
 
     }
 
-}, 1800000);//Se actualiza cada 30min.
+    console.log("Actualizado.");
+
+}, 60000);//Se actualiza cada 1min.
 
 
 // Función que actualiza los datos de las ciudades (ya cargadas) recreando la lista previa.
@@ -213,10 +215,10 @@ function mostrarCiudad(){
         contenido += "<div class='col-lg-3'>";
         contenido += "<div id='cardCity"+j+"' class='card'>";
         contenido += "<div class='row'>";
-        contenido += "<div class='col-lg-11'>"
+        contenido += "<div class='col-lg-11 cardName'>"
         contenido += "<h2>"+ciudades[j].cNombre+"</h2>";
         contenido += "</div>";
-        contenido += "<div class='col-lg-1'>";
+        contenido += "<div class='col-lg-1 cardInput'>";
         contenido += "<input type='checkbox' name='localidad' value='"+ciudades.indexOf(ciudades[j])+"'></input>";
         contenido += "</div>";
         contenido += "</div>";

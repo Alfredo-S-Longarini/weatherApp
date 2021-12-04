@@ -45,6 +45,12 @@ html {
     background-color: #ffffff10;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px); }
+    .card .cardName {
+      width: 90%;
+      position: relative;
+      left: 20px; }
+    .card .cardInput {
+      width: 10%; }
     .card h3 {
       font-size: 20px;
       margin: auto; }
@@ -84,7 +90,9 @@ html {
     margin: 10px 0 0 0; }
   footer {
     color: white;
-    background-color: rgba(97, 97, 97, 0.384);
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -188,6 +196,12 @@ html {
     background-color: #ffffff10;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px); }
+    .card .cardName {
+      width: 90%;
+      position: relative;
+      left: 15px; }
+    .card .cardInput {
+      width: 10%; }
     .card h3 {
       font-size: 20px;
       margin: auto; }
@@ -225,7 +239,9 @@ html {
     margin: 10px 0 0 0; }
   footer {
     color: white;
-    background-color: rgba(97, 97, 97, 0.384);
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     width: 100%;
     position: relative;
     bottom: 0;
