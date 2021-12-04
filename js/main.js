@@ -21,7 +21,6 @@ let apiKey='0deee9c7a166e5a9c50fd9471c4270f4';
 
 function callAPI(city){
     let api= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    // fetch(api).then(response => response.json()).then(result => agregarCiudad(result));
 
     $.get(api, function(respuesta, estado){
         if(estado=="success"){
@@ -59,6 +58,30 @@ setInterval( async function(){
     }
 
 }, 1800000);//Se actualiza cada 30min.
+
+
+// Función que actualiza los datos de las ciudades (ya cargadas) recreando la lista previa.
+function actualizarDatos(info){
+    
+    var nuevaCiudad = {
+        cNombre:info.name,
+        cTemperatura:info.main.temp,
+        cPresion:info.main.pressure,
+        cHumedad:info.main.humidity,
+        cViento:info.wind.speed,
+        cVisibilidad:info.visibility,
+        cSunIn:info.sys.sunrise,
+        cSunOut:info.sys.sunset,
+        cIcon: info.weather[0].icon
+    };
+
+
+    listaCiudades.push(nuevaCiudad);
+
+    localStorageListaCiudad(listaCiudades);
+
+    mostrarCiudad(listaCiudades);
+}
 
 // ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
@@ -140,29 +163,6 @@ function agregarCiudad(info){
     mostrarCiudad(listaCiudades);
 }
 
-// Función que actualiza los datos de las ciudades (ya cargadas) recreando la lista previa.
-function actualizarDatos(info){
-    
-    var nuevaCiudad = {
-        cNombre:info.name,
-        cTemperatura:info.main.temp,
-        cPresion:info.main.pressure,
-        cHumedad:info.main.humidity,
-        cViento:info.wind.speed,
-        cVisibilidad:info.visibility,
-        cSunIn:info.sys.sunrise,
-        cSunOut:info.sys.sunset,
-        cIcon: info.weather[0].icon
-    };
-
-
-    listaCiudades.push(nuevaCiudad);
-
-    localStorageListaCiudad(listaCiudades);
-
-    mostrarCiudad(listaCiudades);
-}
-
 // ----------------------------------------------------------------------------------------
 
 // Función que guarda la lista en el local storage.
@@ -232,7 +232,7 @@ function mostrarCiudad(){
         contenido += "</div>";
         contenido += "</div>";
         contenido += "</div>";
-        contenido += "<div class='btnInfo'><button id='btn"+j+"' class='btn btn-primary' type='button'>Mas Información</button></div>"
+        contenido += "<div class='btnInfo'><button id='btn"+j+"' class='btn btn-primary btnAdd' type='button'>Mas Información</button></div>"
         contenido += "<div id='infoCard"+j+"' class='cardInfo' style='display:none'>"
         contenido += "<div class='row'><h3>Humedad: "+ciudades[j].cHumedad+"%</h3></div>"
         contenido += "<div class='row'><h3>Presion Atmosferica: "+ciudades[j].cPresion+"mbar</h3></div>"
@@ -323,4 +323,28 @@ function unixFecha(unixTime){
 
     return fecha;
 
+}
+
+
+// ----------------------------------------------------------------------------------------
+
+$("#localidadActual").click(function(){
+
+    navigator.geolocation.getCurrentPosition(onSuccess);
+
+});
+
+function onSuccess(position){
+    callCity(position.coords.latitude, position.coords.longitude);
+}
+
+function callCity(lat, long){
+    let api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+
+    $.get(api, function(respuesta, estado){
+        if(estado=="success"){
+            let misDatos=respuesta;
+            agregarCiudad(misDatos);
+        }
+    });
 }

@@ -3,7 +3,7 @@
   padding: 0; }
 
 html {
-  font-size: 62, 5%; }
+  height: max-content; }
 
 @media (min-width: 1024px) {
   body {
@@ -81,7 +81,75 @@ html {
     border-right: 1px solid #c9c9c9; }
   .bg-danger {
     border-radius: 5px;
-    margin: 10px 0 0 0; } }
+    margin: 10px 0 0 0; }
+  footer {
+    color: white;
+    background-color: rgba(97, 97, 97, 0.384);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 5px 0 5px 0; }
+    footer h4 {
+      font-size: medium; }
+    footer .developerName {
+      position: relative;
+      top: 10px;
+      width: 80%; }
+    footer .apiName {
+      position: relative;
+      left: 250px; }
+      footer .apiName img {
+        width: 30%; }
+  .button-33 {
+    position: inherit;
+    width: 50px;
+    height: 50px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px, rgba(44, 187, 99, 0.15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; }
+    .button-33 img {
+      position: relative;
+      right: 4px;
+      width: 185%; }
+  .button-33:hover {
+    box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px, rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px, rgba(44, 187, 99, 0.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg); }
+  .btnDelete {
+    background-color: rgba(255, 30, 30, 0.562);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer; }
+  /* Darker background on mouse-over */
+  .btnDelete:hover {
+    background-color: rgba(255, 0, 0, 0.671); }
+  .btnAdd {
+    margin: 0 5px 0 0;
+    background-color: rgba(30, 34, 255, 0.562);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer; }
+  /* Darker background on mouse-over */
+  .btnAdd:hover {
+    background-color: rgba(0, 4, 255, 0.671); } }
 
 @media (max-width: 767px) {
   body {
@@ -154,9 +222,82 @@ html {
     background-color: #ffffff; }
   .bg-danger {
     border-radius: 5px;
-    margin: 10px 0 0 0; } }
+    margin: 10px 0 0 0; }
+  footer {
+    color: white;
+    background-color: rgba(97, 97, 97, 0.384);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    margin: 50px 0 0 0; }
+    footer h4 {
+      font-size: small; }
+    footer .developerName {
+      position: relative;
+      top: 5px;
+      width: 80%; }
+    footer .apiName {
+      position: relative;
+      right: 30px;
+      width: 20%; }
+      footer .apiName img {
+        width: 120%; }
+  .button-33 {
+    position: block;
+    width: 50px;
+    height: 50px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px, rgba(44, 187, 99, 0.15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; }
+    .button-33 img {
+      position: relative;
+      right: 4px;
+      width: 185%; }
+  .button-33:hover {
+    box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px, rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px, rgba(44, 187, 99, 0.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg); }
+  .btnDelete {
+    background-color: rgba(255, 30, 30, 0.562);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer; }
+  /* Darker background on mouse-over */
+  .btnDelete:hover {
+    background-color: rgba(255, 0, 0, 0.671); }
+  .btnAdd {
+    margin: 0 5px 0 0;
+    background-color: rgba(30, 34, 255, 0.562);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer; }
+  /* Darker background on mouse-over */
+  .btnAdd:hover {
+    background-color: rgba(0, 4, 255, 0.671); } }
 
 /* ------------------------------------------------------- */
 .row {
   margin-left: 0;
   margin-right: 0; }
+
+.container-fluid {
+  padding: 0 0 0 0 !important; }
