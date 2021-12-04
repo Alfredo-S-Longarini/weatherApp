@@ -12,8 +12,7 @@
     line-height: 1.5;
     color: #000000;
     padding-right: 0;
-    background-image: url(../img/wp2532980-night-mountain-wallpapers.jpg);
-    background-size: cover;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   header{
@@ -240,8 +239,7 @@
     line-height: 1.5;
     color: #000000;
     padding-right: 0;
-    background-image: url(../img/wp2532980-night-mountain-wallpapers.jpg);
-    background-size: cover;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   header{
@@ -359,7 +357,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     width: 100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
     padding: 5px 0 5px 0;
     margin: 50px 0 0 0;
