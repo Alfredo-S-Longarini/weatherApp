@@ -214,7 +214,7 @@ html {
     .card .cardInput {
       width: 10%; }
     .card h3 {
-      font-size: 20px;
+      font-size: 25px;
       margin: auto; }
     .card img {
       width: 50%; }
@@ -225,7 +225,7 @@ html {
       padding: 10px 0 10px 0 !important;
       border-top: solid #c9c9c9 1px; }
       .card .cardP1 .tempIcon {
-        width: 13% !important;
+        width: 10% !important;
         position: relative;
         left: 13%; }
   .cardInfo {
