@@ -175,7 +175,8 @@ html {
     line-height: 1.5;
     color: #000000;
     padding-right: 0;
-    background-color: rgba(255, 255, 255, 0); }
+    background: #020024;
+    background: linear-gradient(180deg, #020024 0%, #090979 35%, #00d4ff 100%); }
   header {
     display: flex;
     justify-content: center;
@@ -249,9 +250,6 @@ html {
     margin: 10px 0 0 0; }
   footer {
     color: white;
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     width: 100%;
     position: inherit;
     bottom: 0;
