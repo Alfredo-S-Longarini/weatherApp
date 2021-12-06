@@ -12,9 +12,6 @@
     line-height: 1.5;
     color: #000000;
     padding-right: 0;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-
   }
 
   header{
@@ -238,9 +235,6 @@
     line-height: 1.5;
     color: #000000;
     padding-right: 0;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-
   }
 
   header{
@@ -441,5 +435,253 @@
   /* Darker background on mouse-over */
   .btnAdd:hover {
     background-color: rgba(0, 4, 255, 0.671);
+  }
+}
+
+// ----------------------------------------------------------
+// Vista TABLET
+@media (min-width: 768px) and (max-width: 1023px){
+  body {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 90vh !important;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    padding-right: 0;
+  }
+
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img{
+      position: relative;
+      width: 80%;
+    }
+  }
+
+  .titulo {
+    text-align: center;
+    margin: 10px 0 20px 0;
+    color: #ffffff;
+  }
+
+  form {
+    color: #ffffff;
+    border-radius: 16px;
+    background-color: #ffffff00;
+  }
+
+  .busqueda {
+    text-align: center;
+
+    .form-row {
+      margin: 15px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+
+  .card {
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    .cardName{
+      width: 90%;
+      position: relative;
+      left: 15px;
+    }
+
+    .cardInput{
+      width: 10%;
+    }
+
+    h3 {
+      font-size: 25px;
+      margin: auto;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    .cardP1 {
+      display: flex;
+      flex-direction: row;
+      margin: 5px 0 0 0;
+      padding: 10px 0 10px 0 !important;
+      border-top: solid rgb(201, 201, 201) 1px;
+
+      .tempIcon {
+        width: 10% !important;
+        position: relative;
+        left: 13%;
+      }
+    }
+  }
+
+  .cardInfo {
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .btnInfo {
+    text-align: center;
+    margin: 10px 0 0 0;
+  }
+
+  #infoCard {
+    padding-bottom: 300px;
+    background-color: #ffffff;
+  }
+
+  .bg-danger {
+    border-radius: 5px;
+    margin: 10px 0 0 0;
+  }
+
+  footer{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    margin: 50px 0 0 0;
+    
+    h4{
+      font-size: 18px;
+    }
+
+    .developerName{
+      position: relative;
+      top: 15px;
+      width: 80%;
+    }
+
+    .apiName{
+      position: relative;
+      right: 10px;
+      width: 20%;
+      img{
+        width: 80%;
+      }
+    }
+  }
+
+  .button-33 {
+    position: block;
+    width: 50px;
+    height: 50px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    img{
+      position: relative;
+      right: 4px;
+      width: 185%;
+    }
+  }
+
+  .button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  .btnDelete {
+    background-color: rgba(255, 30, 30, 0.562);
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btnDelete:hover {
+    background-color: rgba(255, 0, 0, 0.671);
+  }
+
+  .btnAdd {
+    margin: 0 5px 0 0;
+    background-color: rgba(30, 34, 255, 0.562);
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btnAdd:hover {
+    background-color: rgba(0, 4, 255, 0.671);
+  }
+}
+
+// ----------------------------------------------------------------------------------------
+// Vista LAPTOP
+@media (min-width: 1030px) and (max-width: 1366px){
+  footer{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+
+    h4{
+      font-size: medium;
+    }
+
+    .developerName{
+      position: relative;
+      top: 15px;
+      width: 80%;
+    }
+
+    .apiName{
+      position: relative;
+      left: 80px;
+      img{
+        width: 60%;
+      }
+    }
   }
 }
