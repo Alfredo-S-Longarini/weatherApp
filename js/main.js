@@ -4,7 +4,6 @@ let listaCiudades=[];
 // ----------------------------------------------------------------------------------------
 
 // Evento del boton guardar.
-
 $("#btnGuardar").click(function(){
 
     guardarCiudad();
@@ -13,7 +12,9 @@ $("#btnGuardar").click(function(){
 
 mostrarCiudad(listaCiudades);
 
+// ----------------------------------------------------------------------------------------
 
+// Funcion que actualiza los datos de las cuidades al cargar la página. 
 $(document).ready( async function(){
 
     var newLista=getListaCiudades();
@@ -47,6 +48,7 @@ let apiKey='0deee9c7a166e5a9c50fd9471c4270f4';
 
 // ----------------------------------------------------------------------------------------
 
+//Funcion que realiza el 1er llamado a la api para agregar a una nueva ciudad.
 function callAPI(city){
     let api= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
@@ -56,11 +58,11 @@ function callAPI(city){
             agregarCiudad(misDatos);
         }
     })
-}
-// ----------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------
+};
+
 // ----------------------------------------------------------------------------------------
 
+// Funcion que actualiza los datos de las ciudades cada 5min.
 setInterval( async function(){
 
     var newLista=getListaCiudades();
@@ -87,8 +89,9 @@ setInterval( async function(){
 
     console.log("Actualizado.");
 
-}, 300000);//Se actualiza cada 5min.
+}, 300000);
 
+// ----------------------------------------------------------------------------------------
 
 // Función que actualiza los datos de las ciudades (ya cargadas) recreando la lista previa.
 function actualizarDatos(info){
@@ -111,10 +114,8 @@ function actualizarDatos(info){
     localStorageListaCiudad(listaCiudades);
 
     mostrarCiudad(listaCiudades);
-}
+};
 
-// ----------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 
 // Función que toma el nombre de la cidudad ingresada y verifica que sea correcto, si ya se encuantra en la lista o si hay espacio para agregarlo.
@@ -145,7 +146,7 @@ function guardarCiudad(){
     }
 
     mostrarCiudad(listaCiudades);
-}
+};
 // ----------------------------------------------------------------------------------------
 
 // Funcion que verifica si una ciudad ya se encuentra en la lista.
@@ -159,7 +160,7 @@ function verificacion(nombreCiudad){
     }
 
     return false;
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -191,7 +192,7 @@ function agregarCiudad(info){
     }
 
     mostrarCiudad(listaCiudades);
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -199,7 +200,7 @@ function agregarCiudad(info){
 function localStorageListaCiudad(cList){
     localStorage.setItem('localListaCiudad', JSON.stringify(cList));
     console.log(localStorage.getItem('localListaCiudad'));
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -215,7 +216,7 @@ function getListaCiudades(){
     }
 
     return listaCiudades;
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -223,13 +224,13 @@ function getListaCiudades(){
 function kelvinC(grados) {
     cambioUnid = parseFloat(grados) - 273.15;
     return cambioUnid;
-}
+};
 
 // Función para realizar el cambio de °K a °F.
 function kelvinF(grados) {
     cambioUnid = (parseFloat(grados) - 273.15)*(9/5)+32;
     return cambioUnid;
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -299,7 +300,7 @@ function mostrarCiudad(){
         $("#infoCard3").toggle();
     
     });
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -317,7 +318,7 @@ function getSelectedCheckboxValues(name) {
         values.push(checkbox.value);
     });
     return values;
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -335,7 +336,7 @@ function borrarCiudad(localidad){
 
     localStorageListaCiudad(listaCiudades);
 
-}
+};
 
 // ----------------------------------------------------------------------------------------
 
@@ -353,10 +354,13 @@ function unixFecha(unixTime){
 
     return fecha;
 
-}
+};
 
 
 // ----------------------------------------------------------------------------------------
+
+// Funciones que trabajan en conjunto para obtener las coordenadas de la ubicacion actual del usuario,
+// las cuales son utilizadas para realizar el llamado a la api y obtener los datos de la ciudad.
 
 $("#localidadActual").click(function(){
 
@@ -366,7 +370,7 @@ $("#localidadActual").click(function(){
 
 function onSuccess(position){
     callCity(position.coords.latitude, position.coords.longitude);
-}
+};
 
 function callCity(lat, long){
     let api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
@@ -377,4 +381,4 @@ function callCity(lat, long){
             agregarCiudad(misDatos);
         }
     });
-}
+};
