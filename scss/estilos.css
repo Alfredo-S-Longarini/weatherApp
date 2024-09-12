@@ -1,5 +1,23 @@
-// ----------------------------------------------------------
-// Vista DESKTOP
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+body {
+  background-image: url(../img/wp2532980-night-mountain-wallpapers.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #666999;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex !important;
@@ -13,182 +31,155 @@
     color: #000000;
     padding-right: 0;
   }
-
-  header{
+  header {
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    img{
-      position: relative;
-      width: 25%;
-    }
   }
-
+  header img {
+    position: relative;
+    width: 25%;
+  }
   .titulo {
     text-align: center;
     margin: 10px 0 20px 0;
     color: #ffffff;
   }
-
   form {
     color: #ffffff;
     border-radius: 16px;
-    background-color: #ffffff00;
+    background-color: rgba(255, 255, 255, 0);
   }
-
   .busqueda {
     text-align: center;
-
-    .form-row {
-      margin: 15px 0;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-    }
-
-    .btn {
-      margin-bottom: 10px;
-    }
   }
-
+  .busqueda .form-row {
+    margin: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .busqueda .btn {
+    margin-bottom: 10px;
+  }
   .card {
     color: #ffffff;
     justify-content: center;
     text-align: center;
     margin-top: 40px;
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.062745098);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    .cardName{
-      width: 90%;
-      position: relative;
-      left: 20px;
-    }
-
-    .cardInput{
-      width: 10%;
-    }
-
-    h3 {
-      font-size: 18px;
-      margin: auto;
-    }
-
-    img {
-      width: 40%;
-    }
-
-    .cardP1 {
-      display: flex;
-      flex-direction: row;
-      margin: 10px 0 0 0;
-      padding: 10px 0 10px 0 !important;
-      border-top: solid rgb(201, 201, 201) 1px;
-
-      .tempIcon {
-        width: 13% !important;
-        position: relative;
-        left: 13%;
-      }
-    }
   }
-
+  .card .cardName {
+    width: 90%;
+    position: relative;
+    left: 20px;
+  }
+  .card .cardInput {
+    width: 10%;
+  }
+  .card h3 {
+    font-size: 18px;
+    margin: auto;
+  }
+  .card img {
+    width: 40%;
+  }
+  .card .cardP1 {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+    padding: 10px 0 10px 0 !important;
+    border-top: solid rgb(201, 201, 201) 1px;
+  }
+  .card .cardP1 .tempIcon {
+    width: 13% !important;
+    position: relative;
+    left: 13%;
+  }
   .cardInfo {
     color: #ffffff;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
     border-radius: 10px;
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.062745098);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    h3 {
-      font-size: 20px;
-    }
   }
-
+  .cardInfo h3 {
+    font-size: 20px;
+  }
   .btnInfo {
     text-align: center;
     margin: 10px 0 0 0;
   }
-
   #infoCard {
     padding-bottom: 300px;
     background-color: #ffffff;
   }
-
   .temp {
     border-right: 1px solid rgb(201, 201, 201);
   }
-
   .bg-danger {
     border-radius: 5px;
     margin: 10px 0 0 0;
   }
-
-  footer{
+  footer {
     color: rgb(255, 255, 255);
     width: 100%;
     position: fixed;
     bottom: 0;
     padding: 5px 0 5px 0;
-
-    h4{
-      font-size: medium;
-    }
-
-    .developerName{
-      position: relative;
-      top: 10px;
-      width: 80%;
-    }
-
-    .apiName{
-      position: relative;
-      left: 250px;
-      img{
-        width: 30%;
-      }
-    }
   }
-
+  footer h4 {
+    font-size: medium;
+  }
+  footer .developerName {
+    position: relative;
+    top: 10px;
+    width: 80%;
+  }
+  footer .apiName {
+    position: relative;
+    left: 250px;
+  }
+  footer .apiName img {
+    width: 30%;
+  }
   .button-33 {
     position: inherit;
     width: 50px;
     height: 50px;
     background-color: #c2fbd7;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px, rgba(44, 187, 99, 0.15) 0 16px 32px;
     color: green;
     cursor: pointer;
     display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
     border: 0;
     font-size: 16px;
-    user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
-    img{
-      position: relative;
-      right: 4px;
-      width: 185%;
-    }
   }
-
+  .button-33 img {
+    position: relative;
+    right: 4px;
+    width: 185%;
+  }
   .button-33:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px, rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px, rgba(44, 187, 99, 0.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
-
   .btnDelete {
     background-color: rgba(255, 30, 30, 0.562);
     border: none;
@@ -198,12 +189,10 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
   /* Darker background on mouse-over */
   .btnDelete:hover {
     background-color: rgba(255, 0, 0, 0.671);
   }
-
   .btnAdd {
     margin: 0 5px 0 0;
     background-color: rgba(30, 34, 255, 0.562);
@@ -214,15 +203,11 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
   /* Darker background on mouse-over */
   .btnAdd:hover {
     background-color: rgba(0, 4, 255, 0.671);
   }
 }
-
-// ----------------------------------------------------------
-// Vista MOBILE
 @media (max-width: 767px) {
   body {
     display: flex !important;
@@ -236,176 +221,151 @@
     color: #000000;
     padding-right: 0;
   }
-
-  header{
+  header {
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    img{
-      position: relative;
-      width: 80%;
-    }
   }
-
+  header img {
+    position: relative;
+    width: 80%;
+  }
   .titulo {
     text-align: center;
     margin: 10px 0 20px 0;
     color: #ffffff;
   }
-
   form {
     color: #ffffff;
     border-radius: 16px;
-    background-color: #ffffff00;
+    background-color: rgba(255, 255, 255, 0);
   }
-
   .busqueda {
     text-align: center;
-
-    .form-row {
-      margin: 15px 0;
-      text-align: center;
-    }
-
-    .btn {
-      margin-bottom: 10px;
-    }
   }
-
+  .busqueda .form-row {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .busqueda .btn {
+    margin-bottom: 10px;
+  }
   .card {
     color: #ffffff;
     justify-content: center;
     text-align: center;
     margin-top: 40px;
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.062745098);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    .cardName{
-      width: 90%;
-      position: relative;
-      left: 15px;
-    }
-
-    .cardInput{
-      width: 10%;
-    }
-
-    h3 {
-      font-size: 25px;
-      margin: auto;
-    }
-
-    img {
-      width: 50%;
-    }
-
-    .cardP1 {
-      display: flex;
-      flex-direction: row;
-      margin: 5px 0 0 0;
-      padding: 10px 0 10px 0 !important;
-      border-top: solid rgb(201, 201, 201) 1px;
-
-      .tempIcon {
-        width: 10% !important;
-        position: relative;
-        left: 13%;
-      }
-    }
   }
-
+  .card .cardName {
+    width: 90%;
+    position: relative;
+    left: 15px;
+  }
+  .card .cardInput {
+    width: 10%;
+  }
+  .card h3 {
+    font-size: 25px;
+    margin: auto;
+  }
+  .card img {
+    width: 50%;
+  }
+  .card .cardP1 {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 0 0;
+    padding: 10px 0 10px 0 !important;
+    border-top: solid rgb(201, 201, 201) 1px;
+  }
+  .card .cardP1 .tempIcon {
+    width: 10% !important;
+    position: relative;
+    left: 13%;
+  }
   .cardInfo {
     color: #ffffff;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
     border-radius: 10px;
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.062745098);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    h3 {
-      font-size: 20px;
-    }
   }
-
+  .cardInfo h3 {
+    font-size: 20px;
+  }
   .btnInfo {
     text-align: center;
     margin: 10px 0 0 0;
   }
-
   #infoCard {
     padding-bottom: 300px;
     background-color: #ffffff;
   }
-
   .bg-danger {
     border-radius: 5px;
     margin: 10px 0 0 0;
   }
-
-  footer{
+  footer {
     color: rgb(255, 255, 255);
     width: 100%;
     position: inherit;
     bottom: 0;
     padding: 5px 0 5px 0;
     margin: 50px 0 0 0;
-    
-    h4{
-      font-size: small;
-    }
-
-    .developerName{
-      position: relative;
-      top: 5px;
-      width: 80%;
-    }
-
-    .apiName{
-      position: relative;
-      right: 30px;
-      width: 20%;
-      img{
-        width: 120%;
-      }
-    }
   }
-
+  footer h4 {
+    font-size: small;
+  }
+  footer .developerName {
+    position: relative;
+    top: 5px;
+    width: 80%;
+  }
+  footer .apiName {
+    position: relative;
+    right: 30px;
+    width: 20%;
+  }
+  footer .apiName img {
+    width: 120%;
+  }
   .button-33 {
     position: block;
     width: 50px;
     height: 50px;
     background-color: #c2fbd7;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px, rgba(44, 187, 99, 0.15) 0 16px 32px;
     color: green;
     cursor: pointer;
     display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
     border: 0;
     font-size: 16px;
-    user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    img{
-      position: relative;
-      right: 4px;
-      width: 185%;
-    }
   }
-
+  .button-33 img {
+    position: relative;
+    right: 4px;
+    width: 185%;
+  }
   .button-33:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px, rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px, rgba(44, 187, 99, 0.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
-
   .btnDelete {
     background-color: rgba(255, 30, 30, 0.562);
     border: none;
@@ -415,12 +375,10 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
   /* Darker background on mouse-over */
   .btnDelete:hover {
     background-color: rgba(255, 0, 0, 0.671);
   }
-
   .btnAdd {
     margin: 0 5px 0 0;
     background-color: rgba(30, 34, 255, 0.562);
@@ -431,16 +389,12 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
   /* Darker background on mouse-over */
   .btnAdd:hover {
     background-color: rgba(0, 4, 255, 0.671);
   }
 }
-
-// ----------------------------------------------------------
-// Vista TABLET
-@media (min-width: 768px) and (max-width: 1023px){
+@media (min-width: 768px) and (max-width: 1023px) {
   body {
     display: flex !important;
     justify-content: center !important;
@@ -453,188 +407,161 @@
     color: #000000;
     padding-right: 0;
   }
-
-  header{
+  header {
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    img{
-      position: relative;
-      width: 80%;
-    }
   }
-
-  #cardsCity{
+  header img {
+    position: relative;
+    width: 80%;
+  }
+  #cardsCity {
     display: flex;
     flex-direction: row;
   }
-
-  .col-lg-3{
+  .col-lg-3 {
     width: 50%;
   }
-
   .titulo {
     text-align: center;
     margin: 10px 0 20px 0;
     color: #ffffff;
   }
-
   form {
     color: #ffffff;
     border-radius: 16px;
-    background-color: #ffffff00;
+    background-color: rgba(255, 255, 255, 0);
   }
-
   .busqueda {
     text-align: center;
-
-    .form-row {
-      margin: 15px 0;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .btn {
-      margin-bottom: 10px;
-    }
   }
-
+  .busqueda .form-row {
+    margin: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .busqueda .btn {
+    margin-bottom: 10px;
+  }
   .card {
     color: #ffffff;
     justify-content: center;
     text-align: center;
     margin-top: 40px;
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.062745098);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    .cardName{
-      width: 90%;
-      position: relative;
-      left: 15px;
-    }
-
-    .cardInput{
-      width: 10%;
-    }
-
-    h3 {
-      font-size: 25px;
-      margin: auto;
-    }
-
-    img {
-      width: 50%;
-    }
-
-    .cardP1 {
-      display: flex;
-      flex-direction: row;
-      margin: 5px 0 0 0;
-      padding: 10px 0 10px 0 !important;
-      border-top: solid rgb(201, 201, 201) 1px;
-
-      .tempIcon {
-        width: 10% !important;
-        position: relative;
-        left: 13%;
-      }
-    }
   }
-
+  .card .cardName {
+    width: 90%;
+    position: relative;
+    left: 15px;
+  }
+  .card .cardInput {
+    width: 10%;
+  }
+  .card h3 {
+    font-size: 25px;
+    margin: auto;
+  }
+  .card img {
+    width: 50%;
+  }
+  .card .cardP1 {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 0 0;
+    padding: 10px 0 10px 0 !important;
+    border-top: solid rgb(201, 201, 201) 1px;
+  }
+  .card .cardP1 .tempIcon {
+    width: 10% !important;
+    position: relative;
+    left: 13%;
+  }
   .cardInfo {
     color: #ffffff;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
     border-radius: 10px;
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.062745098);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
-    h3 {
-      font-size: 20px;
-    }
   }
-
+  .cardInfo h3 {
+    font-size: 20px;
+  }
   .btnInfo {
     text-align: center;
     margin: 10px 0 0 0;
   }
-
   #infoCard {
     padding-bottom: 300px;
     background-color: #ffffff;
   }
-
   .bg-danger {
     border-radius: 5px;
     margin: 10px 0 0 0;
   }
-
-  footer{
+  footer {
     color: rgb(255, 255, 255);
     width: 100%;
     position: inherit;
     bottom: 0;
     padding: 5px 0 5px 0;
     margin: 50px 0 0 0;
-    
-    h4{
-      font-size: 18px;
-    }
-
-    .developerName{
-      position: relative;
-      top: 15px;
-      width: 80%;
-    }
-
-    .apiName{
-      position: relative;
-      right: 10px;
-      width: 20%;
-      img{
-        width: 80%;
-      }
-    }
   }
-
+  footer h4 {
+    font-size: 18px;
+  }
+  footer .developerName {
+    position: relative;
+    top: 15px;
+    width: 80%;
+  }
+  footer .apiName {
+    position: relative;
+    right: 10px;
+    width: 20%;
+  }
+  footer .apiName img {
+    width: 80%;
+  }
   .button-33 {
     position: block;
     width: 50px;
     height: 50px;
     background-color: #c2fbd7;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px, rgba(44, 187, 99, 0.15) 0 16px 32px;
     color: green;
     cursor: pointer;
     display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
     border: 0;
     font-size: 16px;
-    user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    img{
-      position: relative;
-      right: 4px;
-      width: 185%;
-    }
   }
-
+  .button-33 img {
+    position: relative;
+    right: 4px;
+    width: 185%;
+  }
   .button-33:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px, rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px, rgba(44, 187, 99, 0.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
-
   .btnDelete {
     background-color: rgba(255, 30, 30, 0.562);
     border: none;
@@ -644,11 +571,9 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
   .btnDelete:hover {
     background-color: rgba(255, 0, 0, 0.671);
   }
-
   .btnAdd {
     margin: 0 5px 0 0;
     background-color: rgba(30, 34, 255, 0.562);
@@ -659,60 +584,51 @@
     font-size: 16px;
     cursor: pointer;
   }
-  
   .btnAdd:hover {
     background-color: rgba(0, 4, 255, 0.671);
   }
 }
-
-// ----------------------------------------------------------------------------------------
-// Vista LAPTOP
-@media (min-width: 1030px) and (max-width: 1366px){
-
-  .card{
-
-    h3{
-      font-size: 17px;
-    }
-
-    .cardP1 {
-      display: flex;
-      flex-direction: row;
-      margin: 5px 0 0 0;
-      padding: 10px 0 10px 0 !important;
-      border-top: solid rgb(201, 201, 201) 1px;
-  
-      .tempIcon {
-        width: 10% !important;
-        position: relative;
-        left: 13%;
-      }
-    }
+@media (min-width: 1030px) and (max-width: 1366px) {
+  .card h3 {
+    font-size: 17px;
   }
-
-  footer{
+  .card .cardP1 {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 0 0;
+    padding: 10px 0 10px 0 !important;
+    border-top: solid rgb(201, 201, 201) 1px;
+  }
+  .card .cardP1 .tempIcon {
+    width: 10% !important;
+    position: relative;
+    left: 13%;
+  }
+  footer {
     color: rgb(255, 255, 255);
     width: 100%;
     position: fixed;
     bottom: 0;
     padding: 5px 0 5px 0;
-
-    h4{
-      font-size: medium;
-    }
-
-    .developerName{
-      position: relative;
-      top: 15px;
-      width: 80%;
-    }
-
-    .apiName{
-      position: relative;
-      left: 80px;
-      img{
-        width: 60%;
-      }
-    }
+  }
+  footer h4 {
+    font-size: medium;
+  }
+  footer .developerName {
+    position: relative;
+    top: 15px;
+    width: 80%;
+  }
+  footer .apiName {
+    position: relative;
+    left: 80px;
+  }
+  footer .apiName img {
+    width: 60%;
   }
 }
+/* ------------------------------------------------------- */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}/*# sourceMappingURL=estilos.css.map */

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -23,9 +24,5 @@ body{
 .row {
   margin-left: 0;
   margin-right: 0;
-}
-
-.container-fluid{
-  padding:0 0 0 0 !important;
 }
 
